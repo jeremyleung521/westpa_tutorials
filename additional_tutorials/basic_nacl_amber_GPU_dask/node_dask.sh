@@ -14,8 +14,7 @@ echo "current directory is $PWD"
 echo "environment is: "
 env | sort
 
-echo "CVD = " $CUDA_VISIBLE_DEVICES
-echo "CVDA = " $CUDA_VISIBLE_DEVICES_ALLOCATED
+echo "CUDA_VISIBLE_DEVICES_ALLOCATED = " $CUDA_VISIBLE_DEVICES_ALLOCATED
 export CUDA_DEVICES=(`echo $CUDA_VISIBLE_DEVICES_ALLOCATED | tr , ' '`)
 echo "CUDA_DEVICES = " ${CUDA_DEVICES[@]}
 
