@@ -35,6 +35,6 @@ fi
 
 
 # Run WESTPA
-w_run --work-manager=dask --dask-scheduler-file $SERVER_INFO --dask-shutdown-on-exit &> west-$SLURM_JOBID.log
+w_run --work-manager=dask --dask-scheduler-file $SERVER_INFO --dask-shutdown-on-exit --dask-n-retries 3 &> west-$SLURM_JOBID.log
 
 echo "Shutting down.  Hopefully this was on purpose?"
